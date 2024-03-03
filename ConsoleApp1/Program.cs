@@ -26,13 +26,13 @@ namespace ConsoleApp1
             const int myNum = 15;
 
             Console.WriteLine("***** TAKING INPUT *****");           
-            string inp = Console.ReadLine();
+           // string inp = Console.ReadLine();
             // The Console.ReadLine() method returns a string. Therefore, you cannot get information
             // from another data type, such as int
-            int roll=Convert.ToInt32(Console.ReadLine());
+          //  int roll=Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("***** PRINTING INPUT *****");
-            Console.WriteLine("here is the output of takingstring input  "+inp);
-            Console.WriteLine("here is the output of taking integer input  " + roll);
+           // Console.WriteLine("here is the output of takingstring input  "+inp);
+           // Console.WriteLine("here is the output of taking integer input  " + roll);
 
 
 
@@ -90,9 +90,9 @@ namespace ConsoleApp1
             Console.WriteLine(me.ToUpper());
 
             Console.WriteLine("***** STRING INTERPOLATION *****");
-            string name = Console.ReadLine();
-            int age =Convert.ToInt32( Console.ReadLine());
-            Console.WriteLine($" my name is { name } and age is { age }");
+            //string name = Console.ReadLine();
+            //int age =Convert.ToInt32( Console.ReadLine());
+            //Console.WriteLine($" my name is { name } and age is { age }");
            
 
 
