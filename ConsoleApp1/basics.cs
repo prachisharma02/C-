@@ -86,13 +86,24 @@ namespace ConsoleApp1
            
             Console.WriteLine(" ***** String Class *****");
             string me = "my name is prachi";
-            Console.WriteLine(me.Length);
+            Console.WriteLine(me.Length);//17
             Console.WriteLine(me.ToUpper());
+            Console.WriteLine(me[6]);//e
+            Console.WriteLine(me.LastIndexOf('a'));//13
+            Console.WriteLine(me.Substring(1));//y name is prachi
+            Console.WriteLine(me.Substring(5));//me is prachi
+            Console.WriteLine(me.Substring(3,9));// name is p
+
+
+
+
+
 
             Console.WriteLine("***** STRING INTERPOLATION *****");
             //string name = Console.ReadLine();
             //int age =Convert.ToInt32( Console.ReadLine());
             //Console.WriteLine($" my name is { name } and age is { age }");
+
            
 
 
