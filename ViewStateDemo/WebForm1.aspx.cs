@@ -11,15 +11,16 @@ namespace ViewStateDemo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
+            if (IsPostBack) // iski vjh se value restore nhi hogi 
             {
-                Response.Write("postback done");
+                ViewState["name"] = string.Empty;
+                ViewState["password"] = string.Empty;
             }
         }
        
         protected void Button1_Click(object sender, EventArgs e)
         {
-            ViewState["name"] = TextBox1.Text;
+            ViewState["name"] = TextBox1.Text; // store krta hai viewstate k object k andar 
             ViewState["password"] = TextBox2.Text;
 
             TextBox1.Text = TextBox2.Text = string.Empty; 
@@ -31,7 +32,7 @@ namespace ViewStateDemo
         {
             if (ViewState["name"] != null)
             {
-                TextBox1.Text = ViewState["name"].ToString();
+                TextBox1.Text = ViewState["name"].ToString(); // text hmesha string leta hai isiliy ise hmne convert kiya hai viestate object k form me data store krta hai
             }
 
             if (ViewState["password"] != null)

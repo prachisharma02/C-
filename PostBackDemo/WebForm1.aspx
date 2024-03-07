@@ -10,6 +10,11 @@
     <form id="form1" runat="server">
         <div>
             <asp:Button ID="First" runat="server" Text="Submit Button"/> 
+            <asp:ListBox ID="List" runat="server" Width="100px">
+                <%--<asp:ListItem>Item 1</asp:ListItem>
+             <asp:ListItem>Item 2</asp:ListItem>
+             <asp:ListItem>Item 3</asp:ListItem>--%>
+            </asp:ListBox>
         </div>
     </form>
 </body>

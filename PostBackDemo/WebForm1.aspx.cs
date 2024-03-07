@@ -14,7 +14,20 @@ namespace PostBackDemo
             if (IsPostBack)
             {
                Response.Write("this is postback"); // first time it will not display cuz postback is always displayed at second time
+                Additems();
             }
+            if (!IsPostBack)
+            {
+                Response.Write("this is the first load "); // first time it will not display cuz postback is always displayed at second time
+                
+            }
+        }
+        void Additems()
+        {
+            List.Items.Add("first");
+            List.Items.Add("second");
+            List.Items.Add("third");
+
         }
     }
 }
