@@ -1,0 +1,3 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head runat="server">    <title></title></head><body>    <form id="form1" runat="server">               <div style="margin: 0 auto; height:200px;width:350px ;background-color:#e8b1a0; border-radius:7px">
+        <h1 style="text-align: center; padding:20px; margin-top:200px">QueryString Demo </h1>
+    <asp:Label ID="Label1" runat="server" style="text-align: center; padding:20px; margin-top:200px" ></asp:Label></div>           </form></body></html>

@@ -1,0 +1,5 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head runat="server">    <title>Default WebForm</title></head><body>        <div style="margin: 0 auto; height:300px;width:500px ;background-color:#e8b1a0; border-radius:7px">
+    <form id="form1" runat="server">                <h1 style="text-align: center; padding:20px; margin-top:200px">QueryString Demo using C#</h1>
+        <div>            <center>    Firstname: <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>           <br />
+<br />    Lastname : <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>            <br />
+<br />    <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />                </center>                           </div>    </form>            </div></body></html>
