@@ -13,5 +13,14 @@ namespace Cookiesdemo
         {
 
         }
+        protected void Button1(object sender, EventArgs e)
+        {
+            HttpCookie cookie = new HttpCookie("user");  // non-persistent cookies
+            cookie["username"] = first.Text;
+            cookie["password"] = second.Text;
+            cookie.Expires = DateTime.Now.AddDays(2);// after adding these it becomes persistent cookie
+            Response.Cookies.Add(cookie); //ye line hmare browser me hmari cookie ko store krva rhi hai or store krva rhi hai 
+            Response.Redirect("WebForm2.aspx");
+        }
     }
 }
