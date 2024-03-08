@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterpage.Master.cs" Inherits="MasterPageDemo.Site1" %>
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="master.Master.vb" Inherits="VbMasterPage.Site1" %>
+
 
 <!DOCTYPE html>
 <html>

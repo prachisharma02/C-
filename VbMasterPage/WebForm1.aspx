@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/masterpage.Master" AutoEventWireup="true" CodeBehind="aboutpage.aspx.cs" Inherits="MasterPageDemo.WebForm1" %>
+﻿<%@ Page Title="" Language="vb" AutoEventWireup="false" MasterPageFile="~/master.Master" CodeBehind="WebForm1.aspx.vb" Inherits="VbMasterPage.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -7,6 +7,7 @@
     
     <p> showing master demo which have same layout throughout the application </p>
    
-    <a href="contact page.aspx">contact page</a>
+    <a href="WebForm2.aspx">contact page</a>
         </div>
 </asp:Content>
+
