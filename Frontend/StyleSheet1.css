@@ -1,0 +1,51 @@
+﻿.navbar {
+    display: flex; /* Enable flexbox layout (already horizontal) */
+    background-color: antiquewhite; /* Optional background color */
+    padding: 10px; /* Optional padding */
+
+    justify-content: space-between; /* Distribute links evenly */
+}
+
+    .navbar ul {
+        list-style: none; /* Remove default bullet points */
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+
+    .navbar li {
+        margin-right: 20px; /* Space between links */
+        display: inline;
+        padding: 10px;
+       
+    }
+        .navbar li:hover {
+            background-color: #736464;
+            color: beige;
+            padding: 10px;
+            color: aliceblue
+        }
+
+    .navbar a {
+        text-decoration: none; /* Remove underlines */
+        color: #000; /* Text color */
+        padding: 5px 10px; /* Padding for clickable area */
+    }
+        #label2,label3,label4{
+            border:1px solid black;
+            height:10px;
+            width:20px;
+        }
+.container {
+    width: 600px; /* Content-based width for responsiveness */
+    margin: 100px auto; /* Center horizontally */
+     /* Center text elements within the container */
+     border:1px solid black;
+     border-radius:5px;
+     background-color:antiquewhite;
+     padding:40px;
+}
+
+.todo-form { /* Optional: Styling for the form elements */
+    ; /* Stack elements vertically */
+    gap: 10px; /* Add space between form elements */
+}
