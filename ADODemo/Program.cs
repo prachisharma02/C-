@@ -16,6 +16,7 @@ namespace ADODemo
             //ConfigUsing.Connection2();
             //Querys.Connection3();
             //Storedproc.Connection4();
+            NonExecute.Connection5();
             Console.ReadLine();
         }
 
