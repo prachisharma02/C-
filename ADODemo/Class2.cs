@@ -9,15 +9,19 @@ using System.Threading.Tasks;
 
 namespace ADODemo
 {
-    internal class Class1
+    internal class Class2
     {
-        public static void Connection1()
+        public static void Connection2()
         {
-            string cs = "Data Source=LAPTOP-ERN1FTED; Initial Catalog=StudDb; Integrated security=true;";
-            SqlConnection conn = new SqlConnection(cs);
+
+            SqlConnection conn = null;
+            string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+            // we have taken here cs from app.config file
             try
             {
-                conn.Open();
+                // then we have used using statement to automatically close the connection
+                using (conn = new SqlConnection(cs))
+                    conn.Open();
                 if (conn.State == ConnectionState.Open)
                 {
                     Console.WriteLine("Connection created Successfully");
@@ -31,6 +35,8 @@ namespace ADODemo
             {
                 conn.Close();  // Ensure connection is closed even on exceptions
             }
+
+
         }
     }
 }
