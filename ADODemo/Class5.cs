@@ -24,9 +24,10 @@ namespace ADODemo
                     string id = Console.ReadLine();
                     Console.WriteLine("Enter Department");
                     string dept = Console.ReadLine();
-                    Console.WriteLine("Enter Salary "); // its int and  storing in string but after inserting into db it gets converted into int
-                    string sal = Console.ReadLine();
-                    string query = "insert into Employee values(@id,@dept,@sal)"; // these symbols are used in sql for adding parameters 
+                    //Console.WriteLine("Enter Salary "); // its int and  storing in string but after inserting into db it gets converted into int
+                    //string sal = Console.ReadLine();
+                    //string query = "insert into Employee values(@id,@dept,@sal)"; // these symbols are used in sql for adding parameters 
+                    string query = "update  employee set empid=@id where dept=@dept";
 
 //Parameter Placeholders(@id, @dept, @sal):
 //  These symbols are a common way to represent parameters in SQL queries within various
@@ -36,9 +37,9 @@ namespace ADODemo
                     SqlCommand cmd = new SqlCommand(query, conn4);
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@dept", dept);
-                    cmd.Parameters.AddWithValue("@sal", sal);
+                    //cmd.Parameters.AddWithValue("@sal", sal);
 
-//  Cmd.parameters Create Parameter Objects:
+//  Cmd.parameters Create Parameter Object s:
 //      They create SqlParameter objects within the SqlCommand object(cmd) These objects store information
 //      about the parameters, including their names(@id, @dept, @sal) and the data types of the values
 //      they will hold.
@@ -52,7 +53,7 @@ namespace ADODemo
                     {
                         Console.WriteLine("success");
                     }else
-                    { Console.WriteLine("failed"); }
+                    { Console.WriteLine("failed");  }
 
 
 
