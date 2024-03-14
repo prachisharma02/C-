@@ -27,7 +27,8 @@ namespace ADODemo
                     //Console.WriteLine("Enter Salary "); // its int and  storing in string but after inserting into db it gets converted into int
                     //string sal = Console.ReadLine();
                     //string query = "insert into Employee values(@id,@dept,@sal)"; // these symbols are used in sql for adding parameters 
-                    string query = "update  employee set empid=@id where dept=@dept";
+                    //string query = "update  employee set empid=@id where dept=@dept";
+                    string query = "delete from employee where empid =@id";
 
 //Parameter Placeholders(@id, @dept, @sal):
 //  These symbols are a common way to represent parameters in SQL queries within various
