@@ -12,42 +12,14 @@ namespace ADODemo
     {
         static void Main(string[] args)
         {
-            Program.Connection1();
-            //Class1.Connection2();
-            //Class1.Connection1();
+            Class1.Connection1();
+            //Class2.Connection2();
+            Class3.Connection3();
             Console.ReadLine();
         }
 
-        static void Connection1()
-        {
-
-            string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
-            SqlConnection conn = null;
-
-            try
-            {
-                using (conn = new SqlConnection(cs))
-                {
-                    conn.Open();
-
-
-                    if (conn.State == ConnectionState.Open)
-                    {
-                        Console.WriteLine("Connection created Successfully");
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();  // Ensure connection is closed even on exceptions
-            }
-
+    
             
 
         }
     }
-}

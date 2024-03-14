@@ -14,11 +14,11 @@ namespace ADODemo
         public static void Connection1()
         {
             string cs = "Data Source=LAPTOP-ERN1FTED; Initial Catalog=StudDb; Integrated security=true;";
-            SqlConnection conn = new SqlConnection(cs);
+            SqlConnection conn1 = new SqlConnection(cs);
             try
             {
-                conn.Open();
-                if (conn.State == ConnectionState.Open)
+                conn1.Open();
+                if (conn1.State == ConnectionState.Open)
                 {
                     Console.WriteLine("Connection created Successfully");
                 }
@@ -29,7 +29,7 @@ namespace ADODemo
             }
             finally
             {
-                conn.Close();  // Ensure connection is closed even on exceptions
+                conn1.Close();  // Ensure connection is closed even on exceptions
             }
         }
     }

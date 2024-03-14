@@ -14,15 +14,16 @@ namespace ADODemo
         public static void Connection2()
         {
 
-            SqlConnection conn = null;
+            SqlConnection conn2 = null;
             string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
             // we have taken here cs from app.config file
             try
             {
                 // then we have used using statement to automatically close the connection
-                using (conn = new SqlConnection(cs))
-                    conn.Open();
-                if (conn.State == ConnectionState.Open)
+                using (conn2 = new SqlConnection(cs))
+                    conn2.Open();
+                Console.WriteLine("Connection created Successfully");
+                if (conn2.State == ConnectionState.Open)
                 {
                     Console.WriteLine("Connection created Successfully");
                 }
@@ -33,7 +34,7 @@ namespace ADODemo
             }
             finally
             {
-                conn.Close();  // Ensure connection is closed even on exceptions
+                conn2.Close();  // Ensure connection is closed even on exceptions
             }
 
 
