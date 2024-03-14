@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ADODemo
 {
-    internal class Class2
+    internal class ConfigUsing
     {
         public static void Connection2()
         {

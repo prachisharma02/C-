@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ADODemo
 {
-    internal class Class1
+    internal class Connectioncls
     {
         public static void Connection1()
         {

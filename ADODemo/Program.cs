@@ -12,9 +12,10 @@ namespace ADODemo
     {
         static void Main(string[] args)
         {
-            Class1.Connection1();
-            //Class2.Connection2();
-            Class3.Connection3();
+            //Connectioncls.Connection1();
+            //ConfigUsing.Connection2();
+            //Querys.Connection3();
+            //Storedproc.Connection4();
             Console.ReadLine();
         }
 
