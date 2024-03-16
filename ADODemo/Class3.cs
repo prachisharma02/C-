@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ADODemo
 {
-    internal class Querys
+    internal class Executereader
     {
         public static void Connection3()
         {

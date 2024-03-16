@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
+using System.Configuration; // if using this you have to add the system configuration by right clicking on References then add references then tick on system.configuration (this is assemy which is required for adding namespace )
 using System.Data.SqlClient;
 using System.Data;
 using System.Linq;

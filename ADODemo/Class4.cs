@@ -35,7 +35,8 @@ namespace ADODemo
                     SqlDataReader dr = cmd.ExecuteReader();
                     while (dr.Read())
                     {
-                        Console.WriteLine("id :" + dr["empid"] + "  " + "Department Name: " + dr["dept"] + " " + "Salary: " + dr["sal"]);
+                        Console.WriteLine("id :" + dr["empid"] + "  " + "Department Name: " + dr["dept"] + " " + "Salary: " + dr["sal"]);//concatenation syntax
+                        Console.WriteLine("id : {0} Department Name: {1} Salary : {2}", dr["empid"], dr["dept"], dr["sal"]);
                     }
 
                 }

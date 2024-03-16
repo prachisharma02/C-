@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ADODemo
 {
-    internal class ExecuteReader
+    internal class ExecuteScaler
     {
         public static void Connection6()
         {
@@ -18,21 +18,12 @@ namespace ADODemo
             {
                 using (conn6 = new SqlConnection(cs))
                 {
-                    string query1 = "select  max(sal) from employee";
+                    string query1 = "select  max(empid) from employee";
                     SqlCommand cmd = new SqlCommand(query1, conn6);            
                     conn6.Open();
-                    object result = cmd.ExecuteScalar();
-
-                    if (result is int)
-                    {
-                        int getvalue = (int)result;
-                        Console.WriteLine($"Maximum Salary: {getvalue}");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Unexpected data type for maximum salary");
-                        Console.WriteLine(result.ToString());
-                    }
+                    object result = cmd.ExecuteScalar(); // as if we were taking int value was not showing up
+                    Console.WriteLine(result);
+                  
 
 
                 }

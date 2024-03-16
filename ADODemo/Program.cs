@@ -14,10 +14,11 @@ namespace ADODemo
         {
             //Connectioncls.Connection1();
             //ConfigUsing.Connection2();
-            //Querys.Connection3();
+            // Executereader.Connection3();
             //Storedproc.Connection4();
             //NonExecute.Connection5();
-            ExecuteReader.Connection6();
+            ExecuteScaler.Connection6();
+            //Readerproperties.Connection7();
             Console.ReadLine();
         }
 
