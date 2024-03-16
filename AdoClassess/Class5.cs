@@ -14,7 +14,7 @@ namespace ADODemo
     {
         public static void Connection5()
         {
-            string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+            string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection conn5 = null;
             try
             {
@@ -30,11 +30,11 @@ namespace ADODemo
                     string query2 = "update  employee set empid=@id where dept=@dept";
                     string query3 = "delete from employee where empid =@id";
 
-//Parameter Placeholders(@id, @dept, @sal):
-//  These symbols are a common way to represent parameters in SQL queries within various
-//  programming languages, including C#.
-//  They act as variables within the query that will be replaced with actual values later
-//  in the code.
+                    //Parameter Placeholders(@id, @dept, @sal):
+                    //  These symbols are a common way to represent parameters in SQL queries within various
+                    //  programming languages, including C#.
+                    //  They act as variables within the query that will be replaced with actual values later
+                    //  in the code.
                     SqlCommand cmd = new SqlCommand(query1, conn5);
                     cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@dept", dept);
@@ -49,12 +49,13 @@ namespace ADODemo
                     //      corresponding parameter objects.
 
                     conn5.Open();
-                   int queryexecution= cmd.ExecuteNonQuery();
-                    if(queryexecution > 0)
+                    int queryexecution = cmd.ExecuteNonQuery();
+                    if (queryexecution > 0)
                     {
                         Console.WriteLine("success");
-                    }else
-                    { Console.WriteLine("failed");  }
+                    }
+                    else
+                    { Console.WriteLine("failed"); }
 
 
 

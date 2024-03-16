@@ -14,7 +14,7 @@ namespace ADODemo
         public static void Connection4()
         {
 
-            string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+            string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection conn4 = null;
             try
             {

@@ -7,37 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ADODemo
+namespace AdoClassess
 {
     internal class ConfigUsing
     {
         public static void Connection2()
         {
-
-            SqlConnection conn2 = null;
-            string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+            SqlConnection conn = null;
+            string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             // we have taken here cs from app.config file
+
             try
             {
                 // then we have used using statement to automatically close the connection
-                using (conn2 = new SqlConnection(cs))
-                    conn2.Open();
-                Console.WriteLine("Connection created Successfully");
-                if (conn2.State == ConnectionState.Open)
+
+                using (conn = new SqlConnection(cs))
                 {
-                    Console.WriteLine("Connection created Successfully");
+                    conn.Open();
+                    if (conn.State == ConnectionState.Open)
+                    {
+                        Console.WriteLine("success");
+                    }
                 }
-            }
-            catch (SqlException ex)
+            }catch (Exception ex)
             {
-                Console.WriteLine("Error: " + ex.Message);
+                Console.WriteLine(ex);
             }
-            finally
-            {
-                conn2.Close();  // Ensure connection is closed even on exceptions
-            }
-
-
         }
     }
 }
+

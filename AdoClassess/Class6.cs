@@ -12,18 +12,18 @@ namespace ADODemo
     {
         public static void Connection6()
         {
-            string cs = ConfigurationManager.ConnectionStrings["db"].ConnectionString;
+            string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
             SqlConnection conn6 = null;
             try
             {
                 using (conn6 = new SqlConnection(cs))
                 {
                     string query1 = "select  max(empid) from employee";
-                    SqlCommand cmd = new SqlCommand(query1, conn6);            
+                    SqlCommand cmd = new SqlCommand(query1, conn6);
                     conn6.Open();
                     object result = cmd.ExecuteScalar(); // as if we were taking int value was not showing up
                     Console.WriteLine(result);
-                  
+
 
 
                 }
