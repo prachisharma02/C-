@@ -32,15 +32,6 @@ Partial Public Class WebForm1
     Protected WithEvents txtNum1 As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''rfvNum1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rfvNum1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
-
-    '''<summary>
     '''txtNum2 control.
     '''</summary>
     '''<remarks>
@@ -48,15 +39,6 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtNum2 As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''rfvNum2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents rfvNum2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''TextBox3 control.
@@ -111,4 +93,22 @@ Partial Public Class WebForm1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents Modulus As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''rfvNum2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvNum2 As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
+    '''rfvNum1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents rfvNum1 As Global.System.Web.UI.WebControls.RequiredFieldValidator
 End Class
