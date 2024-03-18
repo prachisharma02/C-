@@ -22,8 +22,10 @@ namespace AdoClassess
             //ExecuteScaler.Connection6();
             //Readerproperties.Connection7();
             //DataAdapterDataset.Connection();
+            //Datatable.Connection();
             //Proceduresparameters.Connection();
-            ManualDatatable.Connection();
+            //ManualDatatable.Connection();
+            CopyandClone.Connection();
             Console.ReadLine();
         }
     }
