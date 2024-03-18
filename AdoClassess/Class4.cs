@@ -33,7 +33,7 @@ namespace ADODemo
 
                     conn4.Open();
                     SqlDataReader dr = cmd.ExecuteReader();
-                    while (dr.Read())
+                    while (dr.Read()) // read check for next recorde and return true if there are more rows
                     {
                         Console.WriteLine("id :" + dr["empid"] + "  " + "Department Name: " + dr["dept"] + " " + "Salary: " + dr["sal"]);//concatenation syntax
                         Console.WriteLine("id : {0} Department Name: {1} Salary : {2}", dr["empid"], dr["dept"], dr["sal"]);

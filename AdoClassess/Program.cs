@@ -19,8 +19,11 @@ namespace AdoClassess
             //ExecuteReader.Connection3();
             //Storedproc.Connection4();
             //NonExecute.Connection5();
-            ExecuteScaler.Connection6();
-            Readerproperties.Connection7();
+            //ExecuteScaler.Connection6();
+            //Readerproperties.Connection7();
+            //DataAdapterDataset.Connection();
+            //Proceduresparameters.Connection();
+            ManualDatatable.Connection();
             Console.ReadLine();
         }
     }

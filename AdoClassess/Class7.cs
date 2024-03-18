@@ -24,6 +24,13 @@ namespace ADODemo
                 using (SqlDataReader dr = cmd.ExecuteReader())
                 {
                     Console.WriteLine(dr.FieldCount); // tells the no of column 
+                    Console.WriteLine(dr.HasRows); // means it has rows or not
+                    Console.WriteLine(dr.IsClosed); // sql reader obj close or not
+                    Console.WriteLine(dr.GetName(0));
+                    //getresult if there are multiple queries like
+                   // string query = "select * from employee;select id from test;
+                   //so in these case we use nextresult
+
                 }
 
 
