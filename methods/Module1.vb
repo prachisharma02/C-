@@ -1,50 +1,49 @@
 ﻿Module Module1
 
     Sub Main()
+        Dim obj1 As New Exam()
+        obj1.ExamScore()
+
+        Dim obj2 As New Age()
+        obj2.Eligible()
 
 
-        Dim a As Integer
-        a = 21
-        If a Mod 2 = 0 Then
-            Console.WriteLine("number is even")
-        Else
-            Console.WriteLine(" number is odd")
+        Dim obj3 As New Year()
+        obj3.Days()
 
-        End If
+        Dim obj4 As New Week
+        obj4.Day()
 
+        Dim obj5 As New Leapyear
+        obj5.Leap()
 
-
-        Dim value As String
-        value = "hello hi myself prachi"
-
-        Dim reversedValue As String = ""
-        For i = Len(value) To 1 Step -1
-            reversedValue &= Mid(value, i, 1)
-        Next i
-        Console.WriteLine(reversedValue)
+        Dim obj6 As New Checks
+        obj6.Evenodd()
 
 
+        Console.WriteLine(" To reverse a stringg ")
+
+        Dim obj7 As New Reversestring
+
+        obj7.Revstr()
+
+        obj7.Revwords()
 
 
 
-        Dim value2 As String = "hello hi myself prachi"
 
-        Dim reversedWords2 As String = ""
-        Dim words() As String = value.Split(" ") ' Split the string into an array of words
 
-        For Each word As String In words
-            Dim reversedWord2 As String = ""
-            For i = Len(word) To 1 Step -1 ' Reverse each word individually
-                reversedWord2 &= Mid(word, i, 1)
-            Next i
-            reversedWords2 &= reversedWord2 & " " ' Append reversed word to the result string
-        Next
 
-        ' Remove extra space at the end
-        reversedWords2 = reversedWords2.Trim()
 
-        Console.WriteLine(reversedWords2) '
 
+
+
+
+
+
+
+
+        '
 
 
 

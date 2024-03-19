@@ -15,6 +15,13 @@ namespace AdoClassess
     {
         public static void Connection()
         {
+
+
+            // confusion ki hm disconnected me bhi kyu le rhe hain conn string 
+            // ans is hme data fetch krne k liy to lana padega n ki kha se data fetch krrhe hain
+            // uske baad connection us db se establish bhi krna padega tabhi hm connection class bna
+            // rhe hain bs hme dataadapter k sath explicitly conn.open() and close use nhi krna padta
+            // kyuki vo automatically krdeta hai 
             try
             {
                 string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;// connection string late hain pehle database se
@@ -22,12 +29,19 @@ namespace AdoClassess
                 string query = "Select * from Employee"; // data fetch krte hain db se
                 SqlDataAdapter sd = new SqlDataAdapter(query,conn); // dataadapter query ko read krta hai 
                 DataTable customer = new DataTable("customer"); // datatable create kerte hain data jo fetch hora hai use storekrne k liy
+
+                // jab hme kuch manipulation krni hoti hai data se mtlp fetch krna data bhejna to hm
+                // jab bhi koi method use krte hain adapter ka jase yaha fill tb ye internally open
+                // krdeta hai connection fir sare kaam hojane k baad close krdeta hai jase yaha 
+
                 sd.Fill(customer); // basically fill method dataadapter ka hota hai vo store krta hai datatable me fetch kiya hua data 
                 Console.WriteLine("original");
                 foreach (DataRow ds in customer.Rows) // datarow looping k liy hota hai jo ek ek kkrke record fetch krta hai
                 {
                     Console.WriteLine("{0} , {1} , {2}", ds[0], ds[1], ds[2]);
                 }
+                // close krdega yaha
+
 
                 DataTable copied=customer.Copy();
                 Console.WriteLine("copied");
