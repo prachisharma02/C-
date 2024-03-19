@@ -49,21 +49,21 @@
 
 
 
-        Dim value3 As String = "hello hi myself prachi"
+        'Dim value3 As String = "hello hi myself prachi"
 
-        Dim words3() As String = value.Split(" ")
+        'Dim words3() As String = value.Split(" ")
 
-        Dim reversedWords3() As String
-        Dim j As Integer = reversedWords3.Length - 1
+        'Dim reversedWords3() As String
+        'Dim j As Integer = reversedWords3.Length - 1
 
-        For i As Integer = 0 To words.Length - 1
-            reversedWords3(j) = words(i)
-            j -= 1
-        Next i
+        'For i As Integer = 0 To words.Length - 1
+        '    reversedWords3(j) = words(i)
+        '    j -= 1
+        'Next i
 
-        Dim finalString As String = String.Join(" ", reversedWords3)  ' Join the reversed words back with spaces
+        'Dim finalString As String = String.Join(" ", reversedWords3)  ' Join the reversed words back with spaces
 
-        Console.WriteLine(finalString)  ' Output: prachi myself hi hello
+        'Console.WriteLine(finalString)  ' Output: prachi myself hi hello
 
 
 

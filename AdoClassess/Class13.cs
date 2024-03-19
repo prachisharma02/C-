@@ -17,14 +17,14 @@ namespace AdoClassess
         {
             try
             {
-                string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;
-                SqlConnection conn = new SqlConnection(cs);
-                string query = "Select * from Employee";
-                SqlDataAdapter sd = new SqlDataAdapter(query,conn);
-                DataTable customer = new DataTable("customer");
-                sd.Fill(customer);
+                string cs = ConfigurationManager.ConnectionStrings["dbcs"].ConnectionString;// connection string late hain pehle database se
+                SqlConnection conn = new SqlConnection(cs); // connection establish krte hain cs se
+                string query = "Select * from Employee"; // data fetch krte hain db se
+                SqlDataAdapter sd = new SqlDataAdapter(query,conn); // dataadapter query ko read krta hai 
+                DataTable customer = new DataTable("customer"); // datatable create kerte hain data jo fetch hora hai use storekrne k liy
+                sd.Fill(customer); // basically fill method dataadapter ka hota hai vo store krta hai datatable me fetch kiya hua data 
                 Console.WriteLine("original");
-                foreach (DataRow ds in customer.Rows)
+                foreach (DataRow ds in customer.Rows) // datarow looping k liy hota hai jo ek ek kkrke record fetch krta hai
                 {
                     Console.WriteLine("{0} , {1} , {2}", ds[0], ds[1], ds[2]);
                 }
