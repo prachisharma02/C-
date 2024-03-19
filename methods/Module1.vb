@@ -6,9 +6,9 @@
         Dim a As Integer
         a = 21
         If a Mod 2 = 0 Then
-            Console.WriteLine("a is even")
+            Console.WriteLine("number is even")
         Else
-            Console.WriteLine(" a is odd")
+            Console.WriteLine(" number is odd")
 
         End If
 
