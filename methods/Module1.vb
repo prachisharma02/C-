@@ -1,33 +1,39 @@
 ﻿Module Module1
 
     Sub Main()
-        Dim obj1 As New Exam()
-        obj1.ExamScore()
+        'Dim obj1 As New Exam()
+        'obj1.ExamScore()
 
-        Dim obj2 As New Age()
-        obj2.Eligible()
-
-
-        Dim obj3 As New Year()
-        obj3.Days()
-
-        Dim obj4 As New Week
-        obj4.Day()
-
-        Dim obj5 As New Leapyear
-        obj5.Leap()
-
-        Dim obj6 As New Checks
-        obj6.Evenodd()
+        'Dim obj2 As New Age()
+        'obj2.Eligible()
 
 
-        Console.WriteLine(" To reverse a stringg ")
+        'Dim obj3 As New Year()
+        'obj3.Days()
 
-        Dim obj7 As New Reversestring
+        'Dim obj4 As New Week
+        'obj4.Day()
 
-        obj7.Revstr()
+        'Dim obj5 As New Leapyear
+        'obj5.Leap()
 
-        obj7.Revwords()
+        'Dim obj6 As New Checks
+        'obj6.Evenodd()
+
+
+        Dim obj8 As New Class8
+        obj8.Pattern()
+
+
+        'Console.WriteLine(" To reverse a stringg ")
+
+        'Dim obj7 As New Reversestring
+
+        'obj7.Revstr()
+
+        'obj7.Revwords()
+
+
 
 
 

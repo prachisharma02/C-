@@ -76,6 +76,7 @@
     <Compile Include="Class5.vb" />
     <Compile Include="Class6.vb" />
     <Compile Include="Class7.vb" />
+    <Compile Include="Class8.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

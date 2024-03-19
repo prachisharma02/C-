@@ -25,7 +25,9 @@ namespace AdoClassess
             //Datatable.Connection();
             //Proceduresparameters.Connection();
             //ManualDatatable.Connection();
-            CopyandClone.Connection();
+            //CopyandClone.Connection();
+            //StoredprocdataSet.connection();
+            Datasettable.Connection();
             Console.ReadLine();
         }
     }
