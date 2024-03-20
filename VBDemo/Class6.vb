@@ -1,7 +1,7 @@
 ﻿Public Class Class6
 
     Public Sub Patterns()
-        Console.WriteLine("enter the size ")
+        Console.WriteLine("enter the size to show Patterns ")
         Dim size = Console.ReadLine()
         Console.WriteLine()
 

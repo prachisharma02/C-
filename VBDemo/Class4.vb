@@ -2,7 +2,7 @@
 
     Public Sub Vowels()
 
-        Console.WriteLine("enter the string")
+        Console.Write("enter the String : ")
         Dim value = Console.ReadLine()
         Dim i As Integer = 1
         Dim count As Integer
@@ -14,7 +14,7 @@
 
         Console.WriteLine("Total vowels in string is " & count)
 
-        Console.ReadLine()
+        Console.WriteLine()
 
     End Sub
 

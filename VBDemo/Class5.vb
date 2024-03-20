@@ -1,7 +1,7 @@
 ﻿Public Class Class5
     Public Sub Fibonacci()
 
-        Console.WriteLine("enter the size of values")
+        Console.Write("enter the size of values to print Fibonacci series : ")
         Dim size = Console.ReadLine()
         Dim i As Integer = 1
         Dim a As Integer = 1

@@ -2,9 +2,9 @@
 
     Public Sub Sum()
 
-        Console.WriteLine("enter the size of array")
+        Console.WriteLine("enter the size of Array to find their Sum")
         Dim size = Console.ReadLine()
-        Console.WriteLine("Enter array values to find their sum")
+        Console.WriteLine("Enter array values ")
         Dim val As Integer
         Dim intvalues(size) As Integer
         For val = 1 To size
@@ -19,7 +19,6 @@
         Next
         Console.WriteLine("and their sum is : " & sum)
 
-        Console.ReadLine()
 
     End Sub
 

@@ -10,7 +10,9 @@
             i += 1
         End While
         Console.WriteLine(value & "  factorial is " & fact)
+        Console.WriteLine()
 
     End Sub
+
 
 End Class
