@@ -14,8 +14,12 @@
         'Dim obj4 As New Class4
         'obj4.Vowels()
 
-        Dim obj5 As New Class5
-        obj5.Fibonacci()
+        'Dim obj5 As New Class5
+        'obj5.Fibonacci()
+
+        Dim obj6 As New Class6
+        obj6.Patterns()
+
 
 
 
