@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.vb" />
+    <Compile Include="Class10.vb" />
     <Compile Include="Class2.vb" />
     <Compile Include="Class3.vb" />
     <Compile Include="Class4.vb" />
@@ -77,6 +78,7 @@
     <Compile Include="Class6.vb" />
     <Compile Include="Class7.vb" />
     <Compile Include="Class8.vb" />
+    <Compile Include="Class9.vb" />
     <Compile Include="Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

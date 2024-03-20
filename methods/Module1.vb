@@ -21,9 +21,14 @@
         'obj6.Evenodd()
 
 
-        Dim obj8 As New Class8
-        obj8.Pattern()
+        'Dim obj8 As New Class8
+        'obj8.Pattern()
 
+        'Dim obj9 As New Class9
+        'obj9.Pattern()
+
+        Dim obj10 As New Class10
+        obj10.Pattern()
 
         'Console.WriteLine(" To reverse a stringg ")
 

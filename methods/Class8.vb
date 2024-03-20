@@ -2,7 +2,6 @@
     Public Sub Pattern()
         Console.Write("Enter the size: ")
         Dim size As Integer = Console.ReadLine()
-        ' Adjust the size of the pattern as needed
         For i As Integer = 1 To size
             For j As Integer = 1 To i
                 Console.Write("*")
