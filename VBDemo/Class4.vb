@@ -14,7 +14,9 @@
 
         Console.WriteLine("Total vowels in string is " & count)
 
+        Console.ReadLine()
 
     End Sub
+
 
 End Class
