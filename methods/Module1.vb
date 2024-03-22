@@ -27,8 +27,11 @@
         'Dim obj9 As New Class9
         'obj9.Pattern()
 
-        Dim obj10 As New Class10
-        obj10.Pattern()
+        'Dim obj10 As New Class10
+        'obj10.Pattern()
+        Dim obj11 As New Class11
+        obj11.Pattern()
+
 
         'Console.WriteLine(" To reverse a stringg ")
 
