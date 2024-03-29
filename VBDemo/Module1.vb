@@ -67,6 +67,7 @@
 
         'Class9.SharedVariable = 10
         'Console.WriteLine("Shared variable value: " & Class9.SharedVariable)
+
         '--------------------------------------------Class9-----------------------------------------------------------------
 
         Dim obj10 As New MyClass10
