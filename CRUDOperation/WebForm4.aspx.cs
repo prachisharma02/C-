@@ -19,7 +19,6 @@ namespace CRUDOperation
                 Bindgrid();
             }
         }
-
         protected void Bindgrid()
         {
             string query = "select * from biography";
@@ -48,17 +47,14 @@ namespace CRUDOperation
                 var label = clickedRow.FindControl("Label1") as Label;
                 string name = label.Text;
 
-                string query = "DELETE FROM biography WHERE name=@name";
-
-               
+                string query = "DELETE FROM biography WHERE name=@name";        
                 {
                     conn.Open();
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.ExecuteNonQuery();
                 }
-
-                // Re-bind the GridView after deleting the row
+               // Re-bind the GridView after deleting the row
                 Bindgrid();
             }
             catch (Exception ex)
@@ -67,6 +63,13 @@ namespace CRUDOperation
                 Console.WriteLine(ex.Message);
             }
         }
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = (Button)sender;
+            string name = clickedButton.CommandArgument;
+            Response.Redirect($"WebForm5.aspx?name={name}");
+        }
+
 
 
     }

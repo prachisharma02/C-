@@ -42,6 +42,11 @@
             <h4>Student List</h4>
 <asp:GridView ID="grid" runat="server" OnRowEditing="grid_RowEditing" CssClass="myGrid" AutoGenerateColumns="False">
     <Columns>
+     <asp:TemplateField HeaderText="ID">
+      <ItemTemplate >
+ <asp:Label ID="Label2" runat="server" Text='<%# Bind("id") %>'></asp:Label>  
+ </ItemTemplate>
+     </asp:TemplateField>
         <asp:TemplateField HeaderText="Name">
             <EditItemTemplate>  
             <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>  
@@ -69,7 +74,7 @@
         </asp:TemplateField>
         <asp:TemplateField HeaderText="Actions">
             <ItemTemplate>
-                <asp:Button ID="Button3"   CssClass="edit" runat="server" PostBackUrl="WebForm5.aspx" Text="Edit" />
+                <asp:Button ID="Button3" CssClass="edit" runat="server" Text="Edit" OnClick="Button3_Click" CommandArgument='<%# Eval("Name") %>' />
                 <asp:Button ID="Button2"  CssClass="delete" onclick="Button2_Click" runat="server"  Text="Delete"  />
             </ItemTemplate>
         </asp:TemplateField>

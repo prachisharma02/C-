@@ -41,35 +41,33 @@
         <div id="div1">
             <h5>EDIT DETAILS</h5>
            <form id="form1" runat="server"> 
-                  <div class="mb-3">
-        <label  class="form-label">Student ID</label>
-        <asp:TextBox ID="TextBox5"  class="tbox"  runat="server"></asp:TextBox>
-       <asp:HiddenField runat="server"  ID="tb5"/>
-</div>
-                <div class="mb-3">
-                  
-  <label for="exampleInputEmail1" class="form-label">Name</label>
-  <asp:TextBox ID="TextBox1"  class="tbox"  runat="server"></asp:TextBox>
-</div>
-                <div class="mb-3">
-  <label for="exampleInputEmail1" class="form-label">Phoneno</label>
-  <asp:TextBox ID="TextBox2" runat="server" class="tbox" TextMode="Number"></asp:TextBox>
-</div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <asp:TextBox ID="TextBox3" class="tbox" runat="server" TextMode="Email"></asp:TextBox>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-<asp:TextBox  ID="TextBox4" class="tbox" runat="server" TextMode="Password"></asp:TextBox>  </div>    
+                <div class="mb-3">                 
+                   <label  class="form-label">id</label>
+                   <asp:TextBox ID="TextBox5"  class="tbox"  runat="server"  ReadOnly="true"></asp:TextBox>
+              </div>
+                <div class="mb-3">                 
+                      <label for="exampleInputEmail1" class="form-label">Name</label>
+                      <asp:TextBox ID="TextBox1"  class="tbox"  runat="server"></asp:TextBox>
+                 </div>
+                 <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Phoneno</label>
+                  <asp:TextBox ID="TextBox2" runat="server" class="tbox" TextMode="Number"></asp:TextBox>
+                </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <asp:TextBox ID="TextBox3" class="tbox" runat="server" TextMode="Email"></asp:TextBox>
+              </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <asp:TextBox  ID="TextBox4" class="tbox" runat="server" TextMode="Password"></asp:TextBox>  
+            </div>    
                <asp:Button ID="Button3" CssClass="button" runat="server" onclick="Button3_Click" Text="Update" />
                <asp:Button ID="Button2" CssClass="button" runat="server" onclick="Button2_Click" Text="Delete" />
                 </form>
-</div>
-<div>
+        </div>
+        <div>
              <br/>
-             <br/>
-                     
+             <br/>           
    
     <footer>
         <p>Made by Prachi Sharma</p>

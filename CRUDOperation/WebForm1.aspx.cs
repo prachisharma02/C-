@@ -27,8 +27,7 @@ namespace CRUDOperation
         protected void Button1_Click(object sender, EventArgs e) 
         {
            
-            int id = int.Parse(TextBox5.Text);
-            tb5.Value = id.ToString();
+           
             string name = TextBox1.Text;
             tb1.Value = name;
             int phoneno = int.Parse(TextBox2.Text);
@@ -37,10 +36,10 @@ namespace CRUDOperation
             tb3.Value = name;
             string passw =TextBox4.Text;
             tb4.Value = name;
-            string query1 = "insert into biography values(@id,@name,@phoneno,@email,@passw)";
+            string query1 = "insert into biography values(@name,@phoneno,@email,@passw)";
             conn.Open();
             SqlCommand cmd = new SqlCommand(query1, conn);
-            cmd.Parameters.AddWithValue("@id", id);
+           
             cmd.Parameters.AddWithValue("@name", name);
             cmd.Parameters.AddWithValue("@phoneno", phoneno);
             cmd.Parameters.AddWithValue("@email", email);

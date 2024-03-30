@@ -13,26 +13,51 @@ namespace CRUDOperation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["name"] != null)
+                {
+                    string name = Request.QueryString["name"];
+                    // Fetch data associated with the specified name and populate the edit form
+                    PopulateEditForm(name);
+                }
+            }
         }
-        SqlConnection conn = new SqlConnection("Data Source=LAPTOP-ERN1FTED;Initial Catalog=Student;Integrated Security=True;Encrypt=False");
-        protected void Button1_Click(object sender, EventArgs e)
+        private void PopulateEditForm(string name)
         {
-            string name = TextBox1.Text;
-            int phoneno = int.Parse(TextBox2.Text);
-            string email = TextBox3.Text;
-            string passw = TextBox4.Text;
-            string query1 = "insert into details values(@name,@phoneno,@email,@passw)";
-            conn.Open();
-            SqlCommand cmd = new SqlCommand(query1, conn);
-            cmd.Parameters.AddWithValue("@name", name);
-            cmd.Parameters.AddWithValue("@phoneno", phoneno);
-            cmd.Parameters.AddWithValue("@email", email);
-            cmd.Parameters.AddWithValue("@passw", passw);
-
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            try
+            {
+                conn.Open();
+                string query = "SELECT * FROM biography WHERE name = @name";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@name", name);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    TextBox1.Text = reader["name"].ToString();
+                    TextBox2.Text = reader["phoneno"].ToString();
+                    TextBox3.Text = reader["email"].ToString();
+                    TextBox4.Text = reader["password"].ToString();
+                    TextBox5.Text = reader["id"].ToString();
+                    
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
         }
+
+
+        SqlConnection conn = new SqlConnection("Data Source=LAPTOP-ERN1FTED;Initial Catalog=Student;Integrated Security=True;Encrypt=False");
+        
+
         protected void Button2_Click(object sender, EventArgs e)
         {
             string name = TextBox1.Text;
@@ -47,43 +72,36 @@ namespace CRUDOperation
         }
         protected void Button3_Click(object sender, EventArgs e)
         {
-            TextBox1.Text = Request.Form["tb5"];
-            TextBox1.Text = Request.Form["tb1"];
-            TextBox1.Text = Request.Form["tb2"];
-            TextBox1.Text = Request.Form["tb3"];
-            TextBox1.Text = Request.Form["tb4"];
-
             try
             {
                 string name = TextBox1.Text;
                 int phoneno = int.Parse(TextBox2.Text);
                 string email = TextBox3.Text;
                 string passw = TextBox4.Text;
-                string query = "update biography set name=@name,phoneno=@phoneno,email=@email,password=@passw where name=@name";
+                int id = int.Parse(TextBox5.Text);
+                Console.WriteLine(passw);
+
                 conn.Open();
+                string query = "UPDATE biography SET  phoneno=@phoneno,name=@name, email=@email, password=@passw WHERE id=@id";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@name", name);
                 cmd.Parameters.AddWithValue("@phoneno", phoneno);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@passw", passw);
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.ExecuteNonQuery();
                 conn.Close();
+
+                // Optionally, you can redirect the user to another page after the update
+                Response.Redirect("WebForm4.aspx");
             }
             catch (Exception exception)
             {
+                // Handle exceptions
                 Console.WriteLine(exception.ToString());
             }
-
         }
-        //protected void Button4_Click(object sender, EventArgs e)
-        //{
-        //    string query = "select * from details";
-        //    SqlCommand cmd = new SqlCommand(query, conn);
-        //    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-        //    DataTable data = new DataTable();
-        //    adapter.Fill(data);
-        //    grid.DataSource = data;
-        //    grid.DataBind();
-        //}
+
+
     }
 }

@@ -36,11 +36,7 @@
         <div id="div1">
             <h5>ADD NEW STUDENT</h5>
            <form id="form1" runat="server"> 
-               <div class="mb-3">
-                    <label  class="form-label">Student ID</label>
-                    <asp:TextBox ID="TextBox5"  class="tbox"  runat="server"></asp:TextBox>
-                   <asp:HiddenField runat="server"  ID="tb5"/>
-            </div>
+              
                   <div class="mb-3">
                           <label  class="form-label">Name</label>
                           <asp:TextBox ID="TextBox1"  class="tbox"  runat="server"></asp:TextBox>
