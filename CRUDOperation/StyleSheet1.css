@@ -1,0 +1,90 @@
+﻿
+    #div1
+{
+    margin: 50px auto;
+    height: fit-content;
+    width: 950px;
+    padding: 30px;
+}
+.button {
+    height: 50px;
+    width: 200px;
+    border: 0.5px solid grey;
+    padding:0 10px;
+    background-color: black;
+    color: white;
+}
+
+.navtext{
+    color:white;
+}
+.tbox{
+    width:100%
+}
+
+.welcome{
+    text-align:center;
+    margin:10px auto;
+    height 500px;
+    width:500px;
+        
+}
+
+.backlist {
+    height: 50px;
+    width: 200px;
+    border: 0.5px solid grey;
+    padding: 0 10px;
+    background-color: white;
+    color: black;
+}
+
+footer{
+    background-color:black;
+    color:grey;
+    height:70px;
+    width:100%;
+    padding:20px 10px;
+    text-align:center
+}
+
+.myGrid {
+    width: 800px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    padding: 10px; /* Padding for the entire GridView */
+    border: 1px solid #ccc; /* Optional border */
+}
+
+    .myGrid td, .myGrid th {
+        padding: 8px; /* Padding for individual cells */
+        border: 1px solid #ddd; /* Optional cell borders */
+        text-align: left; /* Adjust text alignment as needed */
+    }
+    .edit{
+        height:50px;
+        width:70px;
+        background-color:black;
+        color:white;
+    }
+.delete {
+    height: 50px;
+    width: 70px;
+    background-color: red;
+    
+}
+a {
+    text-decoration: none;
+    /*height: 50px;
+    width: 200px;
+    border: 0.5px solid grey;
+    padding: 0 10px;
+    background-color: white;
+    color: black;*/
+}
+
+.showlist {
+    margin: 50px auto;
+    height: fit-content;
+    width: 950px;
+    padding: 30px;
+}

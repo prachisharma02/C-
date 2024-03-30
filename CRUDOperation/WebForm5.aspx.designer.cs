@@ -11,7 +11,7 @@ namespace CRUDOperation
 {
 
 
-    public partial class WebForm1
+    public partial class WebForm5
     {
 
         /// <summary>
@@ -51,15 +51,6 @@ namespace CRUDOperation
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// tb1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField tb1;
-
-        /// <summary>
         /// TextBox2 control.
         /// </summary>
         /// <remarks>
@@ -67,15 +58,6 @@ namespace CRUDOperation
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
-
-        /// <summary>
-        /// tb2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField tb2;
 
         /// <summary>
         /// TextBox3 control.
@@ -87,15 +69,6 @@ namespace CRUDOperation
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
 
         /// <summary>
-        /// tb3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField tb3;
-
-        /// <summary>
         /// TextBox4 control.
         /// </summary>
         /// <remarks>
@@ -105,12 +78,21 @@ namespace CRUDOperation
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
 
         /// <summary>
-        /// tb4 control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField tb4;
+        protected global::System.Web.UI.WebControls.Button Button3;
+
+        /// <summary>
+        /// Button2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }
