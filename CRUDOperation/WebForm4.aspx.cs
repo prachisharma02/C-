@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml.Linq;
+using System.Web.DynamicData;
 
 namespace CRUDOperation
 {
@@ -74,10 +75,12 @@ namespace CRUDOperation
         protected void BtnSearch_Click(object sender, EventArgs e)
         {
             string name = txtSearch.Text.Trim();
+            bool recordsFound = false;
+
             if (name == "")
             {
-               
-                table.Text += "NO MATCHING RECORDS";
+                table.Text = "NO MATCHING RECORDS";
+                litTableBody.Text = "";
 
             }
             else
@@ -95,6 +98,7 @@ namespace CRUDOperation
                     litTableBody.Text = "";
                     while (reader.Read())
                     {
+                        recordsFound = true;
                         litTableBody.Text += "<tr>";
                         litTableBody.Text += "<td>" + reader["id"].ToString() + "</td>";
                         litTableBody.Text += "<td>" + reader["Name"].ToString() + "</td>";
@@ -103,12 +107,15 @@ namespace CRUDOperation
                         litTableBody.Text += "<td>" + reader["Password"].ToString() + "</td>";
                         litTableBody.Text += "</tr>";
                     }
+
                 }
+
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex);
                 }
             }
+            
         }
         protected void Button1_Click(object sender, EventArgs e)
         {

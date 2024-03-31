@@ -18,6 +18,8 @@
         <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand navtext" href="WebForm3.aspx">BIOGRAPHY</a>
+      <button class="btn navtext" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                SHOW</button>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,9 +28,7 @@
         <li class="nav-item">
           <a class="nav-link  navtext" aria-current="page" href="WebForm1.aspx">ADD STUDENT</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link navtext" href="WebForm5.aspx">EDIT DETAILS</a>
-        </li>
+       
         <li class="nav-item">
           <a class="nav-link navtext" href="WebForm4.aspx">SHOW ALL DETAILS</a>
         </li>
@@ -44,7 +44,7 @@
         <div class="norec">
         <asp:Label  runat="server" ID="table"></asp:Label>
             </div>
-                    <table class="table">
+ <table class="table">
     <thead>
         <tr>
             <th>ID</th>
@@ -69,9 +69,6 @@
             
 <asp:Button ID="Button1" CssClass="add"   onclick="Button1_Click" runat="server"  Text="ADD STUDENT"  />
 
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Button with data-bs-target
-</button>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
@@ -79,9 +76,7 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <div>
-      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-    </div>
+    <div> List of Students</div>
     <div class="dropdown mt-3" runat="server" id="offcanvasBody">
     </div>
   </div>

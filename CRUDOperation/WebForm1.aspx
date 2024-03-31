@@ -21,9 +21,7 @@
         <li class="nav-item">
           <a class="nav-link  navtext" aria-current="page" href="WebForm1.aspx">ADD STUDENT</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link navtext" href="WebForm5.aspx">EDIT DETAILS</a>
-        </li>
+       
         <li class="nav-item">
           <a class="nav-link navtext" href="WebForm4.aspx">SHOW ALL DETAILS</a>
         </li>
