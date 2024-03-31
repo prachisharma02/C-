@@ -58,7 +58,7 @@
                       <asp:Button  CssClass="button" runat="server" class="btn" onclick="Button1_Click" Text="Add Student" />
     </form>
 
-                    <a href="WebForm4.aspx"  style="height: 350px; width: 500px; margin:30px; border: 0.5px solid grey; padding: 0 10px; background-color: white; color: black;">Back To The List</a></div>
+                    </div>
 
        
              <br/>
