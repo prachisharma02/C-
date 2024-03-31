@@ -35,11 +35,59 @@
        
       </ul>
     </div>
+         <asp:TextBox ID="txtSearch" style="width:300px" runat="server"  placeholder="Search..." CssClass="form-control"></asp:TextBox>
+   <asp:Button ID="btnSearch" style="margin:0 250px 0 10px" runat="server" Text="Search" CssClass="btn btn-primary" OnClick="BtnSearch_Click" />
+    
   </div>
 </nav>
     </nav>
+        <div class="norec">
+        <asp:Label  runat="server" ID="table"></asp:Label>
+            </div>
+                    <table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Phone No</th>
+            <th>Email</th>
+            <th>Password</th>
+            
+        </tr>
+    </thead>
+    <tbody >        <asp:Literal ID="litTableBody" runat="server"></asp:Literal>
+
+    </tbody>
+</table>
         <div class="showlist">
-            <h4>Student List</h4>
+           
+          
+
+
+
+ <h4>Student List</h4>
+            
+<asp:Button ID="Button1" CssClass="add"   onclick="Button1_Click" runat="server"  Text="ADD STUDENT"  />
+
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Button with data-bs-target
+</button>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3" runat="server" id="offcanvasBody">
+    </div>
+  </div>
+</div>
+
+
 <asp:GridView ID="grid" runat="server" OnRowEditing="grid_RowEditing" CssClass="myGrid" AutoGenerateColumns="False">
     <Columns>
      <asp:TemplateField HeaderText="ID">
@@ -79,7 +127,56 @@
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
-</asp:GridView>
+</asp:GridView> 
+ <table >
+    <thead>
+        <tr>   
+            <th> 
+                <asp:TextBox ID="TextBox2"  class="local"   style="width:120px" runat="server" placeholder="Name..." oninput="handleInputChange(this)"></asp:TextBox>
+           <button runat="server" id="btnRun" onserverclick="Namefind" class="btn btn-mini" title="Search">
+    <i class="fa-solid fa-magnifying-glass" style="color:black"></i> 
+</button></th>
+            <th> 
+                <asp:TextBox ID="TextBox3" class="local"   style="width:100px" runat="server" placeholder="Phone No..."></asp:TextBox>
+                       <button runat="server" id="Button4" onserverclick="Numfind" class="btn btn-mini" title="Search">
+    <i class="fa-solid fa-magnifying-glass" style="color:black"></i> 
+</button>
+            </th>
+            <th> 
+    <asp:TextBox ID="TextBox4" class="local"   style="width:200px" runat="server" placeholder="Email..."></asp:TextBox>
+    <button runat="server" id="Button6" onserverclick="Efind" class="btn btn-mini" title="Search">
+    <i class="fa-solid fa-magnifying-glass" style="color:black"></i> 
+</button>
+</th>             
+</tr>
+    </thead>
+    <tbody>
+        <asp:Literal ID="Literal3" runat="server"></asp:Literal>
+
+    </tbody>
+</table>
+<table >
+    <tbody>
+        <asp:Literal ID="Literal4" runat="server"></asp:Literal>
+    </tbody>
+</table>
+
+<table>
+     <tbody>
+    <asp:Literal ID="Literal5" runat="server"></asp:Literal>
+</tbody>
+    </table>
+
+             <div class="norec">
+ <asp:Label  runat="server" ID="Label3"></asp:Label>
+     </div>
+                        <div class="norec">
+<asp:Label  runat="server" ID="Label4"></asp:Label>
+    </div>
+                        <div class="norec">
+<asp:Label  runat="server" ID="Label5"></asp:Label>
+    </div>
+
 </div>
 <footer>
     <p>Made by Prachi Sharma</p>
